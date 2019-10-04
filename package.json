@@ -9,7 +9,7 @@
     "typescript": "^3.6.3"
   },
   "dependencies": {
-    "@quenk/noni": "^1.31.2",
-    "@quenk/tendril": "^0.31.5"
+    "@quenk/noni": "^1.33.0",
+    "@quenk/tendril": "^0.31.6"
   }
 }
