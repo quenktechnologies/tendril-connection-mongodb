@@ -9,7 +9,7 @@ import { Future } from '@quenk/noni/lib/control/monad/future';
 export declare class MongoDBConnection implements conn.Connection {
     client: MongoClient;
     constructor(client: MongoClient);
-    open(): Future<conn.Connection>;
+    open(): Future<void>;
     checkout(): Future<Db>;
     close(): Future<void>;
 }

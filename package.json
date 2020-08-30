@@ -17,8 +17,8 @@
     "typescript": "^4.0.2"
   },
   "dependencies": {
-    "@quenk/noni": "^1.40.2",
-    "@quenk/tendril": "^0.41.0",
+    "@quenk/noni": "^1.40.6",
+    "@quenk/tendril": "^0.41.5",
     "mongodb": "^3.6.0"
   }
 }

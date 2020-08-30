@@ -1,5 +1,7 @@
 import * as conn from '@quenk/tendril/lib/app/connection';
+
 import { MongoClient, Db, MongoClientOptions } from 'mongodb';
+
 import { Future, pure, fromCallback } from '@quenk/noni/lib/control/monad/future';
 
 /**
@@ -11,10 +13,9 @@ export class MongoDBConnection implements conn.Connection {
 
     constructor(public client: MongoClient) { }
 
-    open(): Future<conn.Connection> {
+    open(): Future<void> {
 
-        return fromCallback(cb => this.client.connect(cb))
-            .map(() => <conn.Connection>this);
+        return fromCallback(cb => this.client.connect(cb))      .map(()=>{})
 
     }
 
