@@ -3,13 +3,11 @@ import { MongoClient, Db, MongoClientOptions } from 'mongodb';
 import { Future, pure, fromCallback } from '@quenk/noni/lib/control/monad/future';
 
 /**
- * Connection implementation for the MongoClient.
+ * MongoDBConnection Connection implementation.
  *
  * This uses a single MongoClient and checkouts individual db references.
- * XXX: Note all the usages of <any> here are because the current types
- * are outdated (v 2.x.x).
  */
-export class Connection implements conn.Connection {
+export class MongoDBConnection implements conn.Connection {
 
     constructor(public client: MongoClient) { }
 
@@ -38,4 +36,4 @@ export class Connection implements conn.Connection {
  * connector for creating Connections to a MongoDB instance.
  */
 export const connector = (url: string, opts: MongoClientOptions = {})
-    : Connection => new Connection(new MongoClient(url, opts));
+    : MongoDBConnection => new MongoDBConnection(new MongoClient(url, opts));
